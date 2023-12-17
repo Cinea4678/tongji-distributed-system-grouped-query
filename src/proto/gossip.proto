@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package proto.gossip;
+
+message GossipPush {
+  string type = 1;
+  string selfIp = 2;
+
+  string key = 3;
+  string value = 4;
+  int64 version = 5;
+}
+
+message GossipPull {
+  string type = 1;
+  string selfIp = 2;
+
+  string key = 3;
+  int64 version = 5;
+}
